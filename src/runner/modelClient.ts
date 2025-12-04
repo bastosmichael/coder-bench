@@ -10,8 +10,22 @@ export interface GenerateResult {
 
 export async function generate(options: GenerateOptions): Promise<GenerateResult> {
   const start = Date.now();
-  const response = `Stubbed response for model ${options.model}`;
+  const res = await fetch('http://localhost:11434/api/generate', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      model: options.model,
+      prompt: options.prompt,
+      stream: false,
+    }),
+  });
+
+  if (!res.ok) {
+    throw new Error(`Ollama generate failed with status ${res.status}`);
+  }
+
+  const data = (await res.json()) as { response?: string };
   const latencyMs = Date.now() - start;
 
-  return { response, latencyMs };
+  return { response: data.response ?? '', latencyMs };
 }
