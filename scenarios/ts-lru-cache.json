@@ -1,0 +1,17 @@
+{
+  "id": "ts-lru-cache",
+  "category": "generation",
+  "description": "Implement a generic LRU cache in TypeScript.",
+  "promptFile": "scenarios/ts-lru-cache/prompt.md",
+  "templateDir": "scenarios/ts-lru-cache/template",
+  "solutionFiles": ["src/lruCache.ts"],
+  "commands": {
+    "build": "npm run build",
+    "lint": "npm run lint",
+    "test": "npm test -- lruCache.test.ts"
+  },
+  "constraints": {
+    "noAny": true,
+    "singleCodeBlock": true
+  }
+}
