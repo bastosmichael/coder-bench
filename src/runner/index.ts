@@ -3,11 +3,12 @@ import { constants as fsConstants } from 'fs';
 import { summarizeResults } from './summarizer.js';
 import path from 'path';
 import { loadScenarios } from './scenarioLoader.js';
-import { RunOptions, RunResult, ScenarioConfig } from './types.js';
+import { RunOptions, RunResult, BenchmarkReport, SystemInfo } from './types.js';
 import { createWorkspace, runCommand } from './workspace.js';
 import { generate } from './modelClient.js';
 import { extractCode } from './metrics.js';
 import { execa } from 'execa';
+import os from 'os';
 
 async function fileExists(path: string): Promise<boolean> {
   try {
@@ -184,6 +185,7 @@ export async function runAll(options: RunOptions): Promise<void> {
     }
   }
 
+  /* ... */
   // Execute with concurrency
   const concurrency = options.concurrency || 1;
   const activeWorkers: Promise<void>[] = [];
@@ -204,7 +206,28 @@ export async function runAll(options: RunOptions): Promise<void> {
 
   await Promise.all(activeWorkers);
 
-  await fs.writeFile(options.outFile, JSON.stringify(results, null, 2));
+  // Capture System Info
+  const cpus = os.cpus();
+  const cpuModel = cpus.length > 0 ? cpus[0].model : 'Unknown';
+  // Speed is often 0 on some systems/VMs if not reported per core correctly
+  const cpuSpeed = cpus.length > 0 ? cpus[0].speed : 0;
+
+  const systemInfo: SystemInfo = {
+    platform: os.platform(),
+    release: os.release(),
+    arch: os.arch(),
+    cpuModel,
+    cpuSpeed,
+    cpuCores: cpus.length,
+    totalMemory: os.totalmem(),
+  };
+
+  const report: BenchmarkReport = {
+    system: systemInfo,
+    results
+  };
+
+  await fs.writeFile(options.outFile, JSON.stringify(report, null, 2));
   console.log(`Wrote ${results.length} results to ${options.outFile}`);
 
   console.log('\n--- Benchmark Summary ---\n');
