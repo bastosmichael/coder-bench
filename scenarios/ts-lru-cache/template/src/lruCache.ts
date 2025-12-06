@@ -1,28 +1,32 @@
-// This file will be overwritten by model-generated code.
-// It exists only so the template compiles before replacement.
-export class LRUCache<K, V> {
-  // Placeholder minimal implementation
-  // The benchmark runner will replace this file.
-  // Do not rely on this implementation for correctness.
-  constructor(_options: { capacity: number; ttlMs?: number }) {}
 
-  get(_key: K): V | undefined {
-    return undefined;
+// @ts-nocheck
+// This is a bad implementation of LRU Cache
+// Start with this and FIX IT.
+
+export class LRUCache {
+  constructor(c) {
+    this.c = c
+    this.m = {}
+    this.order = []
   }
 
-  set(_key: K, _value: V): void {
-    // no-op
+  get(k) {
+    if (this.m[k]) return this.m[k]
   }
 
-  has(_key: K): boolean {
-    return false;
+  set(k, v) {
+    this.m[k] = v
+    this.order.push(k)
+    if (this.order.length > this.c) {
+      const rm = this.order.shift()
+      delete this.m[rm]
+    }
   }
 
-  delete(_key: K): boolean {
-    return false;
-  }
+  has(k) { return !!this.m[k] }
 
-  size(): number {
-    return 0;
+  // Syntax error here on purpose
+  delete(k) {
+    delete this.m[k]
+    return true
   }
-}
