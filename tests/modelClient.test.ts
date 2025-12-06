@@ -55,10 +55,15 @@ describe('modelClient', () => {
 
         const promise = generate({ model: 'm', prompt: 'p' });
 
+        // Catch the rejection prevents "Unhandled Rejection"
+        const resultPromise = promise.catch(e => e);
+
         // Advance time to bypass retries
         await vi.runAllTimersAsync();
 
-        await expect(promise).rejects.toThrow('Network error');
+        const result = await resultPromise;
+        expect(result).toBeInstanceOf(Error);
+        expect(result.message).toBe('Network error');
         expect(fetchSpy).toHaveBeenCalledTimes(3);
     });
 
@@ -71,9 +76,13 @@ describe('modelClient', () => {
         } as any);
 
         const promise = generate({ model: 'm', prompt: 'p' });
+        const resultPromise = promise.catch(e => e);
+
         await vi.runAllTimersAsync();
 
-        await expect(promise).rejects.toThrow('Ollama generate failed with status 400');
+        const result = await resultPromise;
+        expect(result).toBeInstanceOf(Error);
+        expect(result.message).toBe('Ollama generate failed with status 400');
     });
 });
 
