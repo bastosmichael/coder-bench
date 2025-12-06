@@ -3,3 +3,5 @@ dist
 .workdir
 .DS_Store
 results.json
+
+base-template/node_modules
