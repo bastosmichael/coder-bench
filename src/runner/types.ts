@@ -71,3 +71,17 @@ export interface RunOptions {
   filterModel?: string;
   filterScenario?: string;
 }
+export interface SystemInfo {
+  platform: string;
+  release: string;
+  arch: string;
+  cpuModel: string;
+  cpuSpeed: number;
+  cpuCores: number;
+  totalMemory: number;
+}
+
+export interface BenchmarkReport {
+  system: SystemInfo;
+  results: RunResult[];
+}
