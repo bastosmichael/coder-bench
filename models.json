@@ -1,3 +1,12 @@
 [
-  "qwen2.5-coder:0.5b"
+  "qwen3-coder:866k",
+  "qwen2.5-coder:0.5b",
+  "starcoder:1b",
+  "deepseek-coder:1.3b",
+  "opencoder:1.5b",
+  "yi-coder:1.5b",
+  "deepcoder:1.5b",
+  "qwen2.5-coder:1.5b",
+  "codegemma:2b",
+  "qwen2.5-coder:3b"
 ]
