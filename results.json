@@ -18,7 +18,7 @@
       "testsPassed": 0,
       "testsFailed": 0,
       "instructionViolations": [],
-      "latencyMs": 11602
+      "latencyMs": 26246
     },
     {
       "model": "qwen2.5-coder:0.5b",
@@ -29,7 +29,7 @@
       "testsPassed": 0,
       "testsFailed": 0,
       "instructionViolations": [],
-      "latencyMs": 16843
+      "latencyMs": 21592
     },
     {
       "model": "qwen2.5-coder:0.5b",
@@ -40,42 +40,40 @@
       "testsPassed": 0,
       "testsFailed": 0,
       "instructionViolations": [],
-      "latencyMs": 6855
+      "latencyMs": 29332
     },
     {
       "model": "qwen2.5-coder:0.5b",
       "scenarioId": "dart-binary-parser",
       "compileOk": false,
-      "lintErrors": 14,
+      "lintErrors": 17,
       "lintWarnings": 0,
       "testsPassed": 0,
       "testsFailed": 0,
       "instructionViolations": [],
-      "latencyMs": 24594
+      "latencyMs": 46015
     },
     {
       "model": "qwen2.5-coder:0.5b",
       "scenarioId": "dart-concurrent-queue",
       "compileOk": false,
-      "lintErrors": 18,
+      "lintErrors": 31,
       "lintWarnings": 0,
       "testsPassed": 0,
       "testsFailed": 0,
       "instructionViolations": [],
-      "latencyMs": 18836
+      "latencyMs": 31990
     },
     {
       "model": "qwen2.5-coder:0.5b",
       "scenarioId": "dart-lru-cache",
       "compileOk": false,
-      "lintErrors": 14,
+      "lintErrors": 21,
       "lintWarnings": 0,
       "testsPassed": 0,
       "testsFailed": 0,
-      "instructionViolations": [
-        "Multiple code blocks detected when only one was expected"
-      ],
-      "latencyMs": 24250
+      "instructionViolations": [],
+      "latencyMs": 28529
     },
     {
       "model": "qwen2.5-coder:0.5b",
@@ -86,7 +84,7 @@
       "testsPassed": 0,
       "testsFailed": 0,
       "instructionViolations": [],
-      "latencyMs": 16548
+      "latencyMs": 37454
     },
     {
       "model": "qwen2.5-coder:0.5b",
@@ -97,7 +95,7 @@
       "testsPassed": 0,
       "testsFailed": 0,
       "instructionViolations": [],
-      "latencyMs": 4577
+      "latencyMs": 8147
     },
     {
       "model": "qwen2.5-coder:0.5b",
@@ -108,7 +106,7 @@
       "testsPassed": 0,
       "testsFailed": 0,
       "instructionViolations": [],
-      "latencyMs": 8385
+      "latencyMs": 18184
     },
     {
       "model": "qwen2.5-coder:0.5b",
@@ -119,7 +117,7 @@
       "testsPassed": 0,
       "testsFailed": 0,
       "instructionViolations": [],
-      "latencyMs": 11205
+      "latencyMs": 44717
     },
     {
       "model": "qwen2.5-coder:0.5b",
@@ -130,7 +128,7 @@
       "testsPassed": 0,
       "testsFailed": 0,
       "instructionViolations": [],
-      "latencyMs": 14940
+      "latencyMs": 30228
     },
     {
       "model": "qwen2.5-coder:0.5b",
@@ -141,7 +139,7 @@
       "testsPassed": 0,
       "testsFailed": 0,
       "instructionViolations": [],
-      "latencyMs": 30429
+      "latencyMs": 7367
     },
     {
       "model": "qwen2.5-coder:0.5b",
@@ -152,7 +150,7 @@
       "testsPassed": 0,
       "testsFailed": 0,
       "instructionViolations": [],
-      "latencyMs": 25744
+      "latencyMs": 17365
     },
     {
       "model": "qwen2.5-coder:0.5b",
@@ -162,8 +160,10 @@
       "lintWarnings": 0,
       "testsPassed": 0,
       "testsFailed": 0,
-      "instructionViolations": [],
-      "latencyMs": 34022
+      "instructionViolations": [
+        "Multiple code blocks detected when only one was expected"
+      ],
+      "latencyMs": 30222
     },
     {
       "model": "qwen2.5-coder:0.5b",
@@ -174,7 +174,7 @@
       "testsPassed": 0,
       "testsFailed": 0,
       "instructionViolations": [],
-      "latencyMs": 29061
+      "latencyMs": 15657
     },
     {
       "model": "qwen2.5-coder:0.5b",
@@ -185,7 +185,7 @@
       "testsPassed": 0,
       "testsFailed": 0,
       "instructionViolations": [],
-      "latencyMs": 8404
+      "latencyMs": 6394
     },
     {
       "model": "qwen2.5-coder:0.5b",
@@ -196,7 +196,7 @@
       "testsPassed": 0,
       "testsFailed": 0,
       "instructionViolations": [],
-      "latencyMs": 42949
+      "latencyMs": 19438
     },
     {
       "model": "qwen2.5-coder:0.5b",
@@ -207,7 +207,7 @@
       "testsPassed": 0,
       "testsFailed": 0,
       "instructionViolations": [],
-      "latencyMs": 26871
+      "latencyMs": 11995
     },
     {
       "model": "qwen2.5-coder:0.5b",
@@ -218,7 +218,7 @@
       "testsPassed": 0,
       "testsFailed": 0,
       "instructionViolations": [],
-      "latencyMs": 1949
+      "latencyMs": 2561
     },
     {
       "model": "qwen2.5-coder:0.5b",
@@ -229,7 +229,7 @@
       "testsPassed": 0,
       "testsFailed": 1,
       "instructionViolations": [],
-      "latencyMs": 23517
+      "latencyMs": 24122
     },
     {
       "model": "qwen2.5-coder:0.5b",
@@ -240,7 +240,7 @@
       "testsPassed": 0,
       "testsFailed": 5,
       "instructionViolations": [],
-      "latencyMs": 9436
+      "latencyMs": 11691
     },
     {
       "model": "qwen2.5-coder:0.5b",
@@ -251,7 +251,7 @@
       "testsPassed": 0,
       "testsFailed": 1,
       "instructionViolations": [],
-      "latencyMs": 36340
+      "latencyMs": 25478
     }
   ]
 }

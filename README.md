@@ -287,7 +287,7 @@ We don't test "Reverse a Linked List". We test:
 
 ## Benchmark Summary
 
-Last updated: 2025-12-06T15:18:18.461Z
+Last updated: 2025-12-06T15:27:19.349Z
 
 **System Environment**
 - **OS**: win32 10.0.26100 (x64)
@@ -297,4 +297,4 @@ Last updated: 2025-12-06T15:18:18.461Z
 
 | Model | Score | C++ | Rust | Hs | Scala | Java | C# | Go | Dart | TS | Py | Ruby | PHP | Bash | HTML | SQL | Latency (ms) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| qwen2.5-coder:0.5b | 20.2 | 20 | 0 | 20 | 20 | 20 | 20 | 0 | 0 | 20 | 20 | 20 | 20 | 20 | 50 | 51 | 18836 |
+| qwen2.5-coder:0.5b | 20.2 | 20 | 0 | 20 | 20 | 20 | 20 | 0 | 0 | 20 | 20 | 20 | 20 | 20 | 50 | 51 | 24122 |
