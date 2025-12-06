@@ -1,0 +1,257 @@
+{
+  "system": {
+    "platform": "win32",
+    "release": "10.0.26100",
+    "arch": "x64",
+    "cpuModel": "Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz",
+    "cpuSpeed": 1992,
+    "cpuCores": 8,
+    "totalMemory": 17075023872
+  },
+  "results": [
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "sh-log-rotator",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 26246
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "cpp-lru-cache",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 21592
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "cs-lru-cache",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 29332
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "dart-binary-parser",
+      "compileOk": false,
+      "lintErrors": 17,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 46015
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "dart-concurrent-queue",
+      "compileOk": false,
+      "lintErrors": 31,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 31990
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "dart-lru-cache",
+      "compileOk": false,
+      "lintErrors": 21,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 28529
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "go-lru-cache",
+      "compileOk": false,
+      "lintErrors": 1,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 37454
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "hs-lru-cache",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 8147
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "html-semantic-page",
+      "compileOk": true,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 18184
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "java-lru-cache",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 44717
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "ml-lru-cache",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 30228
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "php-lru-cache",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 7367
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "py-binary-parser",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 17365
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "py-concurrent-queue",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [
+        "Multiple code blocks detected when only one was expected"
+      ],
+      "latencyMs": 30222
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "py-lru-cache",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 15657
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "rb-lru-cache",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 6394
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "rs-lru-cache",
+      "compileOk": false,
+      "lintErrors": 1,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 19438
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "scala-lru-cache",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 11995
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "sql-ecommerce-analytics",
+      "compileOk": true,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 2561
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "ts-binary-parser",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 1,
+      "instructionViolations": [],
+      "latencyMs": 24122
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "ts-concurrent-queue",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 5,
+      "instructionViolations": [],
+      "latencyMs": 11691
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "ts-lru-cache",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 1,
+      "instructionViolations": [],
+      "latencyMs": 25478
+    }
+  ]
+}
