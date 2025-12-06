@@ -8,8 +8,7 @@ program
   .command('prepare-models')
   .option('--models <file>', 'Models file', 'models.json')
   .option('--delay-ms <number>', 'Delay between pulls in milliseconds', '10000')
-  .action(async (cmd) => {
-    const options = cmd.opts<{ models: string; delayMs: string }>();
+  .action(async (options) => {
     const delay = Number.parseInt(options.delayMs, 10);
     await pullModelsCommand({
       modelsFile: options.models,
@@ -25,16 +24,7 @@ program
   .option('--concurrency <n>', 'Concurrency level', '1')
   .option('--filter-model <pattern>', 'Only run models matching pattern')
   .option('--filter-scenario <pattern>', 'Only run scenarios matching pattern')
-  .action(async (cmd) => {
-    const options = cmd.opts<{
-      models: string;
-      scenarios: string;
-      out: string;
-      concurrency: string;
-      filterModel?: string;
-      filterScenario?: string;
-    }>();
-
+  .action(async (options) => {
     const concurrency = Number.parseInt(options.concurrency, 10);
 
     await runAll({
