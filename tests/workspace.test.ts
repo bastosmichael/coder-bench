@@ -24,8 +24,15 @@ describe('workspace', () => {
 
             const workspacePath = await createWorkspace('model1', 'test-scenario');
 
-            expect(workspacePath).toContain('.workdir/model1-test-scenario-');
-            expect(mockMkdir).toHaveBeenCalledWith(expect.stringMatching(/\.workdir\/model1-test-scenario-\d+/), { recursive: true });
+            const expectedPrefix = path.join('.workdir', 'model1-test-scenario-');
+            expect(workspacePath).toContain(expectedPrefix);
+
+            // Create a regex that matches the path regardless of separator
+            const escapedPrefix = expectedPrefix.replace(/\\/g, '\\\\');
+            expect(mockMkdir).toHaveBeenCalledWith(
+                expect.stringMatching(new RegExp(`${escapedPrefix}\\d+`)),
+                { recursive: true }
+            );
         });
     });
 
