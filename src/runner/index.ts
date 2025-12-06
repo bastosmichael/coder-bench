@@ -1,5 +1,6 @@
 import fs from 'fs/promises';
 import { constants as fsConstants } from 'fs';
+import { summarizeResults } from './summarizer.js';
 import path from 'path';
 import { loadScenarios } from './scenarioLoader.js';
 import { RunOptions, RunResult, ScenarioConfig } from './types.js';
@@ -200,4 +201,7 @@ export async function runAll(options: RunOptions): Promise<void> {
 
   await fs.writeFile(options.outFile, JSON.stringify(results, null, 2));
   console.log(`Wrote ${results.length} results to ${options.outFile}`);
+
+  console.log('\n--- Benchmark Summary ---\n');
+  await summarizeResults(options.outFile);
 }

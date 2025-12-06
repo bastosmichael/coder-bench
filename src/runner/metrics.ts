@@ -46,7 +46,7 @@ export function extractTsCode(
 export function summarizeModelResults(results: RunResult[]): ModelSummary[] {
   const models = [...new Set(results.map(r => r.model))];
 
-  return models.map(model => {
+  const summaries = models.map(model => {
     const modelResults = results.filter(r => r.model === model);
     const total = modelResults.length;
 
@@ -83,4 +83,6 @@ export function summarizeModelResults(results: RunResult[]): ModelSummary[] {
       accuracyScore
     };
   });
+
+  return summaries.sort((a, b) => b.accuracyScore - a.accuracyScore);
 }
