@@ -1,0 +1,19 @@
+{
+    "id": "ts-concurrent-queue",
+    "category": "concurrency",
+    "description": "Implement a concurrent task queue with rate limiting and retries.",
+    "promptFile": "scenarios/ts-concurrent-queue/prompt.md",
+    "templateDir": "scenarios/ts-concurrent-queue/template",
+    "solutionFiles": [
+        "src/taskQueue.ts"
+    ],
+    "commands": {
+        "build": "npm run build",
+        "lint": "npm run lint",
+        "test": "npm test -- taskQueue.test.ts"
+    },
+    "constraints": {
+        "noAny": true,
+        "singleCodeBlock": true
+    }
+}

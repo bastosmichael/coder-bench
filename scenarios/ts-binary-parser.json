@@ -1,0 +1,19 @@
+{
+    "id": "ts-binary-parser",
+    "category": "systems",
+    "description": "Implement a binary protocol parser using Node.js Buffers.",
+    "promptFile": "scenarios/ts-binary-parser/prompt.md",
+    "templateDir": "scenarios/ts-binary-parser/template",
+    "solutionFiles": [
+        "src/parser.ts"
+    ],
+    "commands": {
+        "build": "npm run build",
+        "lint": "npm run lint",
+        "test": "npm test -- parser.test.ts"
+    },
+    "constraints": {
+        "noAny": true,
+        "singleCodeBlock": true
+    }
+}

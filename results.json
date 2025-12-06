@@ -1,6 +1,32 @@
 [
   {
     "model": "qwen2.5-coder:0.5b",
+    "scenarioId": "ts-binary-parser",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 3646
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
+    "scenarioId": "ts-concurrent-queue",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 111
+  },
+  {
+    "model": "qwen2.5-coder:0.5b",
     "scenarioId": "ts-lru-cache",
     "compileOk": false,
     "lintErrors": 0,
@@ -10,7 +36,33 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 3396
+    "latencyMs": 100
+  },
+  {
+    "model": "starcoder:1b",
+    "scenarioId": "ts-binary-parser",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 1678
+  },
+  {
+    "model": "starcoder:1b",
+    "scenarioId": "ts-concurrent-queue",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 47
   },
   {
     "model": "starcoder:1b",
@@ -23,7 +75,33 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 1634
+    "latencyMs": 42
+  },
+  {
+    "model": "deepseek-coder:1.3b",
+    "scenarioId": "ts-binary-parser",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 1746
+  },
+  {
+    "model": "deepseek-coder:1.3b",
+    "scenarioId": "ts-concurrent-queue",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 32
   },
   {
     "model": "deepseek-coder:1.3b",
@@ -36,7 +114,33 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 1772
+    "latencyMs": 30
+  },
+  {
+    "model": "opencoder:1.5b",
+    "scenarioId": "ts-binary-parser",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 2440
+  },
+  {
+    "model": "opencoder:1.5b",
+    "scenarioId": "ts-concurrent-queue",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 54
   },
   {
     "model": "opencoder:1.5b",
@@ -49,7 +153,33 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 2623
+    "latencyMs": 50
+  },
+  {
+    "model": "yi-coder:1.5b",
+    "scenarioId": "ts-binary-parser",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 39
+  },
+  {
+    "model": "yi-coder:1.5b",
+    "scenarioId": "ts-concurrent-queue",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 35
   },
   {
     "model": "yi-coder:1.5b",
@@ -62,7 +192,33 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 2124
+    "latencyMs": 34
+  },
+  {
+    "model": "deepcoder:1.5b",
+    "scenarioId": "ts-binary-parser",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 4021
+  },
+  {
+    "model": "deepcoder:1.5b",
+    "scenarioId": "ts-concurrent-queue",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 105
   },
   {
     "model": "deepcoder:1.5b",
@@ -75,7 +231,33 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 4234
+    "latencyMs": 99
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "scenarioId": "ts-binary-parser",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 3964
+  },
+  {
+    "model": "qwen2.5-coder:1.5b",
+    "scenarioId": "ts-concurrent-queue",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 106
   },
   {
     "model": "qwen2.5-coder:1.5b",
@@ -88,7 +270,33 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 4110
+    "latencyMs": 101
+  },
+  {
+    "model": "codegemma:2b",
+    "scenarioId": "ts-binary-parser",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 128
+  },
+  {
+    "model": "codegemma:2b",
+    "scenarioId": "ts-concurrent-queue",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 123
   },
   {
     "model": "codegemma:2b",
@@ -101,7 +309,33 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 3865
+    "latencyMs": 124
+  },
+  {
+    "model": "qwen2.5-coder:3b",
+    "scenarioId": "ts-binary-parser",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 4391
+  },
+  {
+    "model": "qwen2.5-coder:3b",
+    "scenarioId": "ts-concurrent-queue",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 108
   },
   {
     "model": "qwen2.5-coder:3b",
@@ -114,7 +348,33 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 4697
+    "latencyMs": 103
+  },
+  {
+    "model": "starcoder2:3b",
+    "scenarioId": "ts-binary-parser",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 2544
+  },
+  {
+    "model": "starcoder2:3b",
+    "scenarioId": "ts-concurrent-queue",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 39
   },
   {
     "model": "starcoder2:3b",
@@ -127,7 +387,33 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 2579
+    "latencyMs": 36
+  },
+  {
+    "model": "starcoder:3b",
+    "scenarioId": "ts-binary-parser",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 2507
+  },
+  {
+    "model": "starcoder:3b",
+    "scenarioId": "ts-concurrent-queue",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 44
   },
   {
     "model": "starcoder:3b",
@@ -140,7 +426,33 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 2810
+    "latencyMs": 40
+  },
+  {
+    "model": "deepseek-coder:6.7b",
+    "scenarioId": "ts-binary-parser",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 4357
+  },
+  {
+    "model": "deepseek-coder:6.7b",
+    "scenarioId": "ts-concurrent-queue",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 30
   },
   {
     "model": "deepseek-coder:6.7b",
@@ -153,7 +465,33 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 4875
+    "latencyMs": 29
+  },
+  {
+    "model": "qwen2.5-coder:7b",
+    "scenarioId": "ts-binary-parser",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 6205
+  },
+  {
+    "model": "qwen2.5-coder:7b",
+    "scenarioId": "ts-concurrent-queue",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 106
   },
   {
     "model": "qwen2.5-coder:7b",
@@ -166,7 +504,33 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 7116
+    "latencyMs": 97
+  },
+  {
+    "model": "starcoder2:7b",
+    "scenarioId": "ts-binary-parser",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 4224
+  },
+  {
+    "model": "starcoder2:7b",
+    "scenarioId": "ts-concurrent-queue",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 40
   },
   {
     "model": "starcoder2:7b",
@@ -179,7 +543,33 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 4234
+    "latencyMs": 35
+  },
+  {
+    "model": "starcoder:7b",
+    "scenarioId": "ts-binary-parser",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 4176
+  },
+  {
+    "model": "starcoder:7b",
+    "scenarioId": "ts-concurrent-queue",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 43
   },
   {
     "model": "starcoder:7b",
@@ -192,7 +582,33 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 3883
+    "latencyMs": 40
+  },
+  {
+    "model": "dolphincoder:7b",
+    "scenarioId": "ts-binary-parser",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 4127
+  },
+  {
+    "model": "dolphincoder:7b",
+    "scenarioId": "ts-concurrent-queue",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 39
   },
   {
     "model": "dolphincoder:7b",
@@ -205,7 +621,33 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 4051
+    "latencyMs": 35
+  },
+  {
+    "model": "codellama:7b",
+    "scenarioId": "ts-binary-parser",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 4059
+  },
+  {
+    "model": "codellama:7b",
+    "scenarioId": "ts-concurrent-queue",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 21
   },
   {
     "model": "codellama:7b",
@@ -218,7 +660,33 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 4317
+    "latencyMs": 22
+  },
+  {
+    "model": "sqlcoder:7b",
+    "scenarioId": "ts-binary-parser",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 3662
+  },
+  {
+    "model": "sqlcoder:7b",
+    "scenarioId": "ts-concurrent-queue",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 23
   },
   {
     "model": "sqlcoder:7b",
@@ -231,7 +699,33 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 3929
+    "latencyMs": 23
+  },
+  {
+    "model": "codeqwen:7b",
+    "scenarioId": "ts-binary-parser",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 4219
+  },
+  {
+    "model": "codeqwen:7b",
+    "scenarioId": "ts-concurrent-queue",
+    "compileOk": false,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "instructionViolations": [
+      "No markdown code block found"
+    ],
+    "latencyMs": 55
   },
   {
     "model": "codeqwen:7b",
@@ -244,6 +738,6 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 4900
+    "latencyMs": 51
   }
 ]
