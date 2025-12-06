@@ -2,3 +2,4 @@ node_modules
 dist
 .workdir
 .DS_Store
+results.json
