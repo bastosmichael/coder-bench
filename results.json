@@ -10,7 +10,7 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 3817
+    "latencyMs": 3396
   },
   {
     "model": "starcoder:1b",
@@ -23,7 +23,7 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 1710
+    "latencyMs": 1634
   },
   {
     "model": "deepseek-coder:1.3b",
@@ -36,7 +36,7 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 1779
+    "latencyMs": 1772
   },
   {
     "model": "opencoder:1.5b",
@@ -49,7 +49,7 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 2700
+    "latencyMs": 2623
   },
   {
     "model": "yi-coder:1.5b",
@@ -62,7 +62,7 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 43
+    "latencyMs": 2124
   },
   {
     "model": "deepcoder:1.5b",
@@ -75,7 +75,7 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 4008
+    "latencyMs": 4234
   },
   {
     "model": "qwen2.5-coder:1.5b",
@@ -88,7 +88,7 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 4314
+    "latencyMs": 4110
   },
   {
     "model": "codegemma:2b",
@@ -101,7 +101,7 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 142
+    "latencyMs": 3865
   },
   {
     "model": "qwen2.5-coder:3b",
@@ -114,7 +114,7 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 4465
+    "latencyMs": 4697
   },
   {
     "model": "starcoder2:3b",
@@ -127,7 +127,7 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 2891
+    "latencyMs": 2579
   },
   {
     "model": "starcoder:3b",
@@ -140,7 +140,7 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 2937
+    "latencyMs": 2810
   },
   {
     "model": "deepseek-coder:6.7b",
@@ -153,7 +153,7 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 4895
+    "latencyMs": 4875
   },
   {
     "model": "qwen2.5-coder:7b",
@@ -166,7 +166,7 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 6783
+    "latencyMs": 7116
   },
   {
     "model": "starcoder2:7b",
@@ -179,7 +179,7 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 4584
+    "latencyMs": 4234
   },
   {
     "model": "starcoder:7b",
@@ -192,7 +192,7 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 4266
+    "latencyMs": 3883
   },
   {
     "model": "dolphincoder:7b",
@@ -205,7 +205,7 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 4162
+    "latencyMs": 4051
   },
   {
     "model": "codellama:7b",
@@ -218,7 +218,7 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 4327
+    "latencyMs": 4317
   },
   {
     "model": "sqlcoder:7b",
@@ -231,7 +231,7 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 3678
+    "latencyMs": 3929
   },
   {
     "model": "codeqwen:7b",
@@ -244,6 +244,6 @@
     "instructionViolations": [
       "No markdown code block found"
     ],
-    "latencyMs": 4116
+    "latencyMs": 4900
   }
 ]

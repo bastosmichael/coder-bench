@@ -8,7 +8,6 @@ npm run prepare-models
 npm run bench
 npm run summarize
 ```
---- Benchmark Summary ---
 
 ┌─────────┬───────────────────────┬───────────┬──────────────┬─────────────┬────────┬──────────────┐
 │ (index) │ Model                 │ Compile % │ Lint Clean % │ Test Pass % │ Score  │ Latency (ms) │
