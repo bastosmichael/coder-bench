@@ -20,6 +20,7 @@ export async function summarizeResults(file: string): Promise<void> {
       'Java': s.javaScore.toFixed(1),
       'C#': s.csharpScore.toFixed(1),
       'Go': s.goScore.toFixed(1),
+      'Dart': s.dartScore.toFixed(1),
       'TS': s.tsScore.toFixed(1),
       'Py': s.pyScore.toFixed(1),
       'Ruby': s.rubyScore.toFixed(1),
@@ -33,11 +34,11 @@ export async function summarizeResults(file: string): Promise<void> {
     console.table(tableData);
 
     // Generate Markdown Table
-    let markdown = '\n| Model | Score | C++ | Rust | Hs | Scala | Java | C# | Go | TS | Py | Ruby | PHP | Bash | HTML | SQL | Latency (ms) |\n';
-    markdown += '|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n';
+    let markdown = '\n| Model | Score | C++ | Rust | Hs | Scala | Java | C# | Go | Dart | TS | Py | Ruby | PHP | Bash | HTML | SQL | Latency (ms) |\n';
+    markdown += '|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n';
 
     for (const s of summaries) {
-      markdown += `| ${s.model} | ${s.accuracyScore.toFixed(1)} | ${s.cppScore.toFixed(1)} | ${s.rustScore.toFixed(1)} | ${s.haskellScore.toFixed(1)} | ${s.scalaScore.toFixed(1)} | ${s.javaScore.toFixed(1)} | ${s.csharpScore.toFixed(1)} | ${s.goScore.toFixed(1)} | ${s.tsScore.toFixed(1)} | ${s.pyScore.toFixed(1)} | ${s.rubyScore.toFixed(1)} | ${s.phpScore.toFixed(1)} | ${s.bashScore.toFixed(1)} | ${s.htmlScore.toFixed(1)} | ${s.sqlScore.toFixed(1)} | ${s.medianLatencyMs} |\n`;
+      markdown += `| ${s.model} | ${s.accuracyScore.toFixed(1)} | ${s.cppScore.toFixed(1)} | ${s.rustScore.toFixed(1)} | ${s.haskellScore.toFixed(1)} | ${s.scalaScore.toFixed(1)} | ${s.javaScore.toFixed(1)} | ${s.csharpScore.toFixed(1)} | ${s.goScore.toFixed(1)} | ${s.dartScore.toFixed(1)} | ${s.tsScore.toFixed(1)} | ${s.pyScore.toFixed(1)} | ${s.rubyScore.toFixed(1)} | ${s.phpScore.toFixed(1)} | ${s.bashScore.toFixed(1)} | ${s.htmlScore.toFixed(1)} | ${s.sqlScore.toFixed(1)} | ${s.medianLatencyMs} |\n`;
     }
 
     // Read README

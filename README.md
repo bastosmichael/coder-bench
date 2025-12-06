@@ -100,7 +100,20 @@ This is **not** a ranking of languages by difficulty for humans — it’s speci
 
 ---
 
-### **8. TypeScript (moderately easy)**
+---
+
+### **8. Dart**
+
+**Why:**
+
+*   Sound null safety and strict type system.
+*   Tooling (`dart analyze`) is strict but helpful.
+*   Async concepts (`Future`) sometimes trip up models.
+*   Slightly less training data than TS/Python but high quality (Flutter).
+
+---
+
+### **9. TypeScript (moderately easy)**
 
 **Why:**
 
@@ -113,7 +126,7 @@ This is **not** a ranking of languages by difficulty for humans — it’s speci
 
 ---
 
-### **9. Python**
+### **10. Python**
 
 **Why it’s easier:**
 
@@ -124,7 +137,7 @@ This is **not** a ranking of languages by difficulty for humans — it’s speci
 
 ---
 
-### **10. Ruby**
+### **11. Ruby**
 
 **Why:**
 
@@ -135,7 +148,7 @@ This is **not** a ranking of languages by difficulty for humans — it’s speci
 
 ---
 
-### **11. PHP**
+### **12. PHP**
 
 **Why:**
 
@@ -145,7 +158,7 @@ This is **not** a ranking of languages by difficulty for humans — it’s speci
 
 ---
 
-### **12. Bash / Shell scripts**
+### **13. Bash / Shell scripts**
 
 **Why:**
 
@@ -155,7 +168,7 @@ This is **not** a ranking of languages by difficulty for humans — it’s speci
 
 ---
 
-### **13. HTML/CSS**
+### **14. HTML/CSS**
 
 **Why it’s almost trivial:**
 
@@ -165,7 +178,7 @@ This is **not** a ranking of languages by difficulty for humans — it’s speci
 
 ---
 
-### **14. SQL (easiest for models to generate & test)**
+### **15. SQL (easiest for models to generate & test)**
 
 **Why it’s easiest:**
 
@@ -186,13 +199,14 @@ This is **not** a ranking of languages by difficulty for humans — it’s speci
 | **5**  | **Java**            | Framework complexity, annotations                |
 | **6**  | **C#**              | Namespace/API hallucinations                     |
 | **7**  | **Go**              | Interface correctness, concurrency               |
-| **8**  | **TypeScript**      | Types + linting + ecosystem surface area         |
-| **9**  | **Python**          | Dynamic, model-friendly                          |
-| **10** | **Ruby**            | Easy but can hallucinate Rails magic             |
-| **11** | **PHP**             | Straightforward, permissive                      |
-| **12** | **Bash**            | Env-dependent but simple                         |
-| **13** | **HTML/CSS**        | No runtime errors                                |
-| **14** | **SQL**             | Highly deterministic, models excel               |
+| **8**  | **Dart**            | Sound null safety, async patterns                |
+| **9**  | **TypeScript**      | Types + linting + ecosystem surface area         |
+| **10** | **Python**          | Dynamic, model-friendly                          |
+| **11** | **Ruby**            | Easy but can hallucinate Rails magic             |
+| **12** | **PHP**             | Straightforward, permissive                      |
+| **13** | **Bash**            | Env-dependent but simple                         |
+| **14** | **HTML/CSS**        | No runtime errors                                |
+| **15** | **SQL**             | Highly deterministic, models excel               |
 
 
 ## Benchmark Methodology
@@ -248,7 +262,7 @@ Different languages pose different challenges to LLMs. This benchmark attempts t
 *   **Requirement**: Zero compiler warnings, idiomatic resource management.
 *   **Typical Failure**: Models struggle to satisfy the borrow checker (Rust) or handle complex monads (Haskell) without hallucinations.
 
-#### **Medium Difficulty (Java, C#, Scala, Go)**
+#### **Medium Difficulty (Java, C#, Scala, Go, Dart)**
 *   **Challenge**: Verbosity, Strict Type Systems, Project Structures.
 *   **Requirement**: Correct imports, package declarations, and type safety.
 *   **Typical Failure**: Models often hallucinate APIs or miss specific import paths (e.g., `java.util.concurrent.ConcurrentHashMap`).
@@ -273,8 +287,8 @@ We don't test "Reverse a Linked List". We test:
 
 ## Benchmark Summary
 
-Last updated: 2025-12-06T04:54:25.794Z
+Last updated: 2025-12-06T13:54:40.413Z
 
-| Model | Score | C++ | Rust | Hs | Scala | Java | C# | Go | TS | Py | Ruby | PHP | Bash | HTML | SQL | Latency (ms) |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| qwen2.5-coder:0.5b | 25.2 | 20.1 | 0.1 | 20.3 | 20.2 | 20.2 | 20.2 | 0.1 | 20.1 | 40.1 | 20.1 | 20.1 | 50.1 | 50.2 | 50.4 | 17734 |
+| Model | Score | C++ | Rust | Hs | Scala | Java | C# | Go | Dart | TS | Py | Ruby | PHP | Bash | HTML | SQL | Latency (ms) |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| qwen2.5-coder:0.5b | 25.2 | 20.1 | 0.1 | 20.3 | 20.2 | 20.2 | 20.2 | 0.1 | 0.0 | 20.1 | 40.1 | 20.1 | 20.1 | 50.1 | 50.2 | 50.4 | 17734 |

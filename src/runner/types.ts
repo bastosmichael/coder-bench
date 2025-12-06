@@ -48,6 +48,7 @@ export interface ModelSummary {
   javaScore: number;
   csharpScore: number;
   goScore: number;
+  dartScore: number;
   tsScore: number; // Rank 8
   pyScore: number; // Rank 9
   rubyScore: number;

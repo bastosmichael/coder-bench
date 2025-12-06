@@ -1,0 +1,19 @@
+{
+    "id": "dart-binary-parser",
+    "category": "systems",
+    "description": "Binary protocol parser using ByteData/Uint8List.",
+    "promptFile": "scenarios/dart/dart-binary-parser/prompt.md",
+    "templateDir": "scenarios/dart/dart-binary-parser/template",
+    "solutionFiles": [
+        "src/parser.dart"
+    ],
+    "commands": {
+        "build": "dart pub get && dart analyze src/parser.dart",
+        "lint": "dart analyze .",
+        "test": "dart test test/parser_test.dart"
+    },
+    "constraints": {
+        "noAny": true,
+        "singleCodeBlock": true
+    }
+}

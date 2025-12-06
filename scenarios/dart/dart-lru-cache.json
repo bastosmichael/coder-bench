@@ -1,0 +1,19 @@
+{
+    "id": "dart-lru-cache",
+    "category": "system-design",
+    "description": "LRU Cache implementation.",
+    "promptFile": "scenarios/dart/dart-lru-cache/prompt.md",
+    "templateDir": "scenarios/dart/dart-lru-cache/template",
+    "solutionFiles": [
+        "src/lru_cache.dart"
+    ],
+    "commands": {
+        "build": "dart pub get && dart analyze src/lru_cache.dart",
+        "lint": "dart analyze .",
+        "test": "dart test test/lru_test.dart"
+    },
+    "constraints": {
+        "noAny": true,
+        "singleCodeBlock": true
+    }
+}

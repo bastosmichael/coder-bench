@@ -13,7 +13,7 @@ export function extractCode(
   const violations: string[] = [];
 
   // specific language blocks or generic
-  const codeBlockRegex = /```(?:typescript|ts|python|py|cpp|c\+\+|c|rust|rs|haskell|hs|ocaml|ml|scala|java|csharp|cs|go|ruby|rb|php|bash|sh|shell|html|css|sql)?\s*([\s\S]*?)```/i;
+  const codeBlockRegex = /```(?:typescript|ts|python|py|cpp|c\+\+|c|rust|rs|haskell|hs|ocaml|ml|scala|java|csharp|cs|go|ruby|rb|php|bash|sh|shell|html|css|sql|dart)?\s*([\s\S]*?)```/i;
   const match = response.match(codeBlockRegex);
 
   if (match) {
@@ -91,6 +91,7 @@ export function summarizeModelResults(results: RunResult[]): ModelSummary[] {
     const javaScore = calculateScore(modelResults.filter(r => r.scenarioId.startsWith('java-')));
     const csharpScore = calculateScore(modelResults.filter(r => r.scenarioId.startsWith('cs-')));
     const goScore = calculateScore(modelResults.filter(r => r.scenarioId.startsWith('go-')));
+    const dartScore = calculateScore(modelResults.filter(r => r.scenarioId.startsWith('dart-')));
     const tsScore = calculateScore(modelResults.filter(r => r.scenarioId.startsWith('ts-')));
     const pyScore = calculateScore(modelResults.filter(r => r.scenarioId.startsWith('py-')));
     const rubyScore = calculateScore(modelResults.filter(r => r.scenarioId.startsWith('rb-')));
@@ -101,7 +102,7 @@ export function summarizeModelResults(results: RunResult[]): ModelSummary[] {
 
     // Calculate overall score as the average of language scores
     const scores = [
-      cppScore, rustScore, haskellScore, scalaScore, javaScore, csharpScore, goScore,
+      cppScore, rustScore, haskellScore, scalaScore, javaScore, csharpScore, goScore, dartScore,
       tsScore, pyScore, rubyScore, phpScore, bashScore, htmlScore, sqlScore
     ];
     // Filter out languages that were not run (score 0 doesn't mean not run, but wait, calculateScore returns 0 if empty)
@@ -127,6 +128,7 @@ export function summarizeModelResults(results: RunResult[]): ModelSummary[] {
     checkLang('java-', javaScore);
     checkLang('cs-', csharpScore);
     checkLang('go-', goScore);
+    checkLang('dart-', dartScore);
     checkLang('ts-', tsScore);
     checkLang('py-', pyScore);
     checkLang('rb-', rubyScore);
@@ -152,6 +154,7 @@ export function summarizeModelResults(results: RunResult[]): ModelSummary[] {
       javaScore,
       csharpScore,
       goScore,
+      dartScore,
       tsScore,
       pyScore,
       rubyScore,

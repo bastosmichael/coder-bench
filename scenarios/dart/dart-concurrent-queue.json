@@ -1,0 +1,19 @@
+{
+    "id": "dart-concurrent-queue",
+    "category": "concurrency",
+    "description": "Async Task Queue with rate limiting.",
+    "promptFile": "scenarios/dart/dart-concurrent-queue/prompt.md",
+    "templateDir": "scenarios/dart/dart-concurrent-queue/template",
+    "solutionFiles": [
+        "src/task_queue.dart"
+    ],
+    "commands": {
+        "build": "dart pub get && dart analyze src/task_queue.dart",
+        "lint": "dart analyze .",
+        "test": "dart test test/queue_test.dart"
+    },
+    "constraints": {
+        "noAny": true,
+        "singleCodeBlock": true
+    }
+}
