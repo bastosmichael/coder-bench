@@ -1,0 +1,18 @@
+{
+    "id": "py-lru-cache",
+    "category": "generation",
+    "description": "Implement a generic LRU cache in Python.",
+    "promptFile": "scenarios/python/py-lru-cache/prompt.md",
+    "templateDir": "scenarios/python/py-lru-cache/template",
+    "solutionFiles": [
+        "src/lru_cache.py"
+    ],
+    "commands": {
+        "build": "python3 -m py_compile src/lru_cache.py",
+        "lint": "echo 'skipping lint' || pylint src/lru_cache.py",
+        "test": "python3 -m pytest tests/test_lru_cache.py"
+    },
+    "constraints": {
+        "singleCodeBlock": true
+    }
+}

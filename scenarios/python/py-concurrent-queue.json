@@ -1,0 +1,19 @@
+{
+    "id": "py-concurrent-queue",
+    "category": "concurrency",
+    "description": "Asyncio TaskQueue with rate limiting.",
+    "promptFile": "scenarios/python/py-concurrent-queue/prompt.md",
+    "templateDir": "scenarios/python/py-concurrent-queue/template",
+    "solutionFiles": [
+        "src/task_queue.py"
+    ],
+    "commands": {
+        "build": "python3 -m py_compile src/task_queue.py",
+        "lint": "echo noop",
+        "test": "python3 -m pytest tests/test_queue.py"
+    },
+    "constraints": {
+        "noAny": false,
+        "singleCodeBlock": true
+    }
+}

@@ -2,8 +2,8 @@
     "id": "ts-binary-parser",
     "category": "systems",
     "description": "Implement a binary protocol parser using Node.js Buffers.",
-    "promptFile": "scenarios/ts-binary-parser/prompt.md",
-    "templateDir": "scenarios/ts-binary-parser/template",
+    "promptFile": "scenarios/typescript/ts-binary-parser/prompt.md",
+    "templateDir": "scenarios/typescript/ts-binary-parser/template",
     "solutionFiles": [
         "src/parser.ts"
     ],

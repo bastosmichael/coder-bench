@@ -40,6 +40,8 @@ export interface ModelSummary {
   instructionScore: number;
   medianLatencyMs: number;
   accuracyScore: number;
+  tsScore: number;
+  pyScore: number;
 }
 
 export interface PullModelsOptions {

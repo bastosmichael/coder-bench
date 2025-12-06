@@ -6,7 +6,7 @@ import { loadScenarios } from './scenarioLoader.js';
 import { RunOptions, RunResult, ScenarioConfig } from './types.js';
 import { createWorkspace, runCommand } from './workspace.js';
 import { generate } from './modelClient.js';
-import { extractTsCode } from './metrics.js';
+import { extractCode } from './metrics.js';
 import { execa } from 'execa';
 
 async function fileExists(path: string): Promise<boolean> {
@@ -58,31 +58,30 @@ export async function runAll(options: RunOptions): Promise<void> {
       tasks.push(async () => {
         console.log(`Running ${model} on ${scenario.config.id}...`);
 
+        const isTs = scenario.config.id.startsWith('ts-');
+
         // 1. Setup Workspace
         const relativeWorkspacePath = await createWorkspace(model, scenario.config.id);
         const workspacePath = path.resolve(relativeWorkspacePath);
 
-        // Copy base template (excluding node_modules)
-        // We use fs.cp if available (Node 16.7+), otherwise fs.copyFile loop or execa 'cp'
-        // Assuming modern node, but let's be safe and copy specific folders if cp is flaky?
-        // fs.cp is stable in Node 20.
-        // We'll use execa for recursion to be safe and simple
-        await execa('cp', ['-r', path.join(baseDir, 'package.json'), workspacePath]);
-        await execa('cp', ['-r', path.join(baseDir, 'tsconfig.json'), workspacePath]);
-        await execa('cp', ['-r', path.join(baseDir, 'vitest.config.ts'), workspacePath]);
-        await execa('cp', ['-r', path.join(baseDir, '.eslintrc.cjs'), workspacePath]);
-        await execa('cp', ['-r', path.join(baseDir, '.prettierrc'), workspacePath]);
+        // Copy base template (excluding node_modules) ONLY for TS
+        if (isTs) {
+          await execa('cp', ['-r', path.join(baseDir, 'package.json'), workspacePath]);
+          await execa('cp', ['-r', path.join(baseDir, 'tsconfig.json'), workspacePath]);
+          await execa('cp', ['-r', path.join(baseDir, 'vitest.config.ts'), workspacePath]);
+          await execa('cp', ['-r', path.join(baseDir, '.eslintrc.cjs'), workspacePath]);
+          await execa('cp', ['-r', path.join(baseDir, '.prettierrc'), workspacePath]);
 
-        // Symlink node_modules
-        await fs.symlink(
-          path.join(baseDir, 'node_modules'),
-          path.join(workspacePath, 'node_modules')
-        );
+          // Symlink node_modules
+          await fs.symlink(
+            path.join(baseDir, 'node_modules'),
+            path.join(workspacePath, 'node_modules')
+          );
+        }
 
         // Copy scenario template
         const templateDir = path.resolve(scenario.config.templateDir);
         // Copy contents of templateDir to workspacePath
-        // cp -r templateDir/* workspacePath
         await execa('cp', ['-R', '.', workspacePath], { cwd: templateDir });
 
         // 2. Generate
@@ -108,7 +107,7 @@ export async function runAll(options: RunOptions): Promise<void> {
           return;
         }
 
-        const { code, instructionViolations } = extractTsCode(generateResult.response, scenario.config.constraints);
+        const { code, instructionViolations } = extractCode(generateResult.response, scenario.config.constraints);
 
         // Write code to solution file
         // Default to first solution file
@@ -123,22 +122,28 @@ export async function runAll(options: RunOptions): Promise<void> {
 
         // Lint
         const lintRes = await runCommand(scenario.config.commands.lint, workspacePath);
-        // Parse lint output (eslint)
-        // output: "5 problems (2 errors, 3 warnings)"
-        const lintMatch = lintRes.stdout.match(/(\d+) problems? \((\d+) errors?, (\d+) warnings?\)/);
+
         let lintErrors = 0;
         let lintWarnings = 0;
-        if (lintMatch) {
-          lintErrors = parseInt(lintMatch[2], 10);
-          lintWarnings = parseInt(lintMatch[3], 10);
-        } else if (lintRes.exitCode !== 0) {
-          // Maybe it just says "error"
-          // Eslint with default formatter usually prints stats info at end.
-          // If parse fails but exit code != 0, assume some errors.
-          // Let's count occurences of "error" and "warning" in lines?
-          // Fallback
-          lintErrors = (lintRes.stdout.match(/error/gi) || []).length;
-          lintWarnings = (lintRes.stdout.match(/warning/gi) || []).length;
+
+        if (isTs) {
+          // Parse lint output (eslint)
+          const lintMatch = lintRes.stdout.match(/(\d+) problems? \((\d+) errors?, (\d+) warnings?\)/);
+          if (lintMatch) {
+            lintErrors = parseInt(lintMatch[2], 10);
+            lintWarnings = parseInt(lintMatch[3], 10);
+          } else if (lintRes.exitCode !== 0) {
+            lintErrors = (lintRes.stdout.match(/error/gi) || []).length;
+            lintWarnings = (lintRes.stdout.match(/warning/gi) || []).length;
+          }
+        } else {
+          // Python lint (pylint) simplistics
+          if (lintRes.exitCode !== 0) {
+            // If it failed, assume errors. 
+            // Count lines containing ': error'?
+            lintErrors = (lintRes.stdout.match(/error/gi) || []).length;
+            if (lintErrors === 0) lintErrors = 1; // fallback
+          }
         }
 
         // Test

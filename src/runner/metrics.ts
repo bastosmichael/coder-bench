@@ -5,15 +5,15 @@ export interface ExtractionResult {
   instructionViolations: string[];
 }
 
-export function extractTsCode(
+export function extractCode(
   response: string,
   constraints: ScenarioConstraints
 ): ExtractionResult {
   let code = response;
   const violations: string[] = [];
 
-  // Simple markdown code block extraction
-  const codeBlockRegex = /```(?:typescript|ts)?\s*([\s\S]*?)```/i;
+  // specific language blocks or generic
+  const codeBlockRegex = /```(?:typescript|ts|python|py)?\s*([\s\S]*?)```/i;
   const match = response.match(codeBlockRegex);
 
   if (match) {
@@ -27,10 +27,7 @@ export function extractTsCode(
       }
     }
   } else {
-    // If no code block, we might consider it a violation or just take the whole text if it looks like code?
-    // For now, let's assume if no code block, it's failed to follow instructions if we strictly expect markdown.
-    // But maybe the model just output code. Let's try to detect.
-    if (response.trim().startsWith('import') || response.trim().startsWith('export') || response.trim().startsWith('function') || response.trim().startsWith('class')) {
+    if (response.trim().startsWith('import') || response.trim().startsWith('export') || response.trim().startsWith('function') || response.trim().startsWith('class') || response.trim().startsWith('def')) {
       // likely raw code
     } else {
       violations.push('No markdown code block found');
@@ -48,37 +45,45 @@ export function summarizeModelResults(results: RunResult[]): ModelSummary[] {
 
   const summaries = models.map(model => {
     const modelResults = results.filter(r => r.model === model);
-    const total = modelResults.length;
 
+    const calculateScore = (items: RunResult[]) => {
+      if (items.length === 0) return 0;
+      const total = items.length;
+      const compileOk = items.filter(r => r.compileOk).length;
+      const lintClean = items.filter(r => r.lintErrors === 0 && r.lintWarnings === 0).length;
+
+      const totalTests = items.reduce((sum, r) => sum + r.testsPassed + r.testsFailed, 0);
+      const totalPassed = items.reduce((sum, r) => sum + r.testsPassed, 0);
+      const passedRate = totalTests > 0 ? totalPassed / totalTests : 0;
+
+      const latencies = items.map(r => r.latencyMs).sort((a, b) => a - b);
+      const medianLatency = latencies.length > 0 ? latencies[Math.floor(latencies.length / 2)] : 0;
+
+      const baseScore = (
+        (compileOk / total) * 30 +
+        (lintClean / total) * 20 +
+        passedRate * 50
+      );
+
+      const speedBonus = medianLatency > 0 ? (2000 / (medianLatency + 100)) : 0;
+      return baseScore + speedBonus;
+    };
+
+    // Total stats
+    const total = modelResults.length;
     const compileOk = modelResults.filter(r => r.compileOk).length;
     const lintClean = modelResults.filter(r => r.lintErrors === 0 && r.lintWarnings === 0).length;
-    const allTestsPassed = modelResults.filter(r => r.testsPassed > 0 && r.testsFailed === 0).length;
 
-    // Simple aggregations
     const totalTests = modelResults.reduce((sum, r) => sum + r.testsPassed + r.testsFailed, 0);
     const totalPassed = modelResults.reduce((sum, r) => sum + r.testsPassed, 0);
-
     const passedRate = totalTests > 0 ? totalPassed / totalTests : 0;
 
-    // Median latency
     const latencies = modelResults.map(r => r.latencyMs).sort((a, b) => a - b);
     const medianLatency = latencies.length > 0 ? latencies[Math.floor(latencies.length / 2)] : 0;
 
-    // Accuracy Score (weighted)
-    // 30% compile, 20% lint, 50% test pass rate
-    // This is arbitrary, users can adjust.
-    const baseScore = (
-      (compileOk / total) * 30 +
-      (lintClean / total) * 20 +
-      passedRate * 50
-    );
-
-    // Speed bonus: higher is better. 
-    // If latency is 100ms -> +20 points.
-    // If latency is 1000ms -> +2 points.
-    // If latency is 10000ms -> +0.2 points.
-    // This differentiates models that otherwise fail everything uniquely.
-    const speedBonus = medianLatency > 0 ? (2000 / (medianLatency + 100)) : 0;
+    const overallScore = calculateScore(modelResults);
+    const tsScore = calculateScore(modelResults.filter(r => r.scenarioId.startsWith('ts-')));
+    const pyScore = calculateScore(modelResults.filter(r => r.scenarioId.startsWith('py-')));
 
     return {
       model,
@@ -87,7 +92,9 @@ export function summarizeModelResults(results: RunResult[]): ModelSummary[] {
       testPassRate: passedRate * 100,
       instructionScore: 100,
       medianLatencyMs: medianLatency,
-      accuracyScore: baseScore + speedBonus
+      accuracyScore: overallScore,
+      tsScore,
+      pyScore
     };
   });
 

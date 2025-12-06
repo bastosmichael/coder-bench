@@ -16,17 +16,19 @@ export async function summarizeResults(file: string): Promise<void> {
       'Lint Clean %': s.lintCleanRate.toFixed(1),
       'Test Pass %': s.testPassRate.toFixed(1),
       'Score': s.accuracyScore.toFixed(1),
+      'TS Score': s.tsScore.toFixed(1),
+      'Py Score': s.pyScore.toFixed(1),
       'Latency (ms)': s.medianLatencyMs
     }));
 
     console.table(tableData);
 
     // Generate Markdown Table
-    let markdown = '\n| Model | Compile % | Lint Clean % | Test Pass % | Score | Latency (ms) |\n';
-    markdown += '|---|---|---|---|---|---|\n';
+    let markdown = '\n| Model | Compile % | Lint Clean % | Test Pass % | Score | TS Score | Py Score | Latency (ms) |\n';
+    markdown += '|---|---|---|---|---|---|---|---|\n';
 
     for (const s of summaries) {
-      markdown += `| ${s.model} | ${s.compileRate.toFixed(1)} | ${s.lintCleanRate.toFixed(1)} | ${s.testPassRate.toFixed(1)} | ${s.accuracyScore.toFixed(1)} | ${s.medianLatencyMs} |\n`;
+      markdown += `| ${s.model} | ${s.compileRate.toFixed(1)} | ${s.lintCleanRate.toFixed(1)} | ${s.testPassRate.toFixed(1)} | ${s.accuracyScore.toFixed(1)} | ${s.tsScore.toFixed(1)} | ${s.pyScore.toFixed(1)} | ${s.medianLatencyMs} |\n`;
     }
 
     // Read README

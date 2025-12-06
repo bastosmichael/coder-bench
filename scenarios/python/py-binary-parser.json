@@ -1,0 +1,19 @@
+{
+    "id": "py-binary-parser",
+    "category": "systems",
+    "description": "Binary protocol parser using struct/bytes.",
+    "promptFile": "scenarios/python/py-binary-parser/prompt.md",
+    "templateDir": "scenarios/python/py-binary-parser/template",
+    "solutionFiles": [
+        "src/parser.py"
+    ],
+    "commands": {
+        "build": "python3 -m py_compile src/parser.py",
+        "lint": "echo noop",
+        "test": "python3 -m pytest tests/test_parser.py"
+    },
+    "constraints": {
+        "noAny": false,
+        "singleCodeBlock": true
+    }
+}
