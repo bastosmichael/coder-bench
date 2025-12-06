@@ -1,0 +1,18 @@
+{
+    "id": "cpp-lru-cache",
+    "category": "generation",
+    "description": "Implement a generic LRU cache in C++17.",
+    "promptFile": "scenarios/cpp/cpp-lru-cache/prompt.md",
+    "templateDir": "scenarios/cpp/cpp-lru-cache/template",
+    "solutionFiles": [
+        "src/lru_cache.hpp"
+    ],
+    "commands": {
+        "build": "g++ -std=c++17 -Wall -Wextra -Werror -x c++-header src/lru_cache.hpp -o /dev/null",
+        "lint": "echo 'noop' || cppcheck --enable=all --error-exitcode=1 src/lru_cache.hpp",
+        "test": "g++ -std=c++17 tests/test_lru.cpp -I src -o test_runner && ./test_runner"
+    },
+    "constraints": {
+        "singleCodeBlock": true
+    }
+}

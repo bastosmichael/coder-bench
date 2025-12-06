@@ -13,7 +13,7 @@ export function extractCode(
   const violations: string[] = [];
 
   // specific language blocks or generic
-  const codeBlockRegex = /```(?:typescript|ts|python|py)?\s*([\s\S]*?)```/i;
+  const codeBlockRegex = /```(?:typescript|ts|python|py|cpp|c\+\+|c)?\s*([\s\S]*?)```/i;
   const match = response.match(codeBlockRegex);
 
   if (match) {

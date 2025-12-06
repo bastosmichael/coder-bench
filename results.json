@@ -1,68 +1,13 @@
 [
   {
     "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "py-binary-parser",
-    "compileOk": true,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 22489
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "py-concurrent-queue",
-    "compileOk": true,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 28902
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "py-lru-cache",
-    "compileOk": true,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 16899
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "ts-binary-parser",
+    "scenarioId": "cpp-lru-cache",
     "compileOk": false,
     "lintErrors": 0,
     "lintWarnings": 0,
     "testsPassed": 0,
     "testsFailed": 0,
     "instructionViolations": [],
-    "latencyMs": 26745
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "ts-concurrent-queue",
-    "compileOk": false,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 25074
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "ts-lru-cache",
-    "compileOk": false,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 61943
+    "latencyMs": 179287
   }
 ]
