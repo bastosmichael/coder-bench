@@ -16,6 +16,7 @@
     "@types/node": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
+    "@vitest/coverage-v8": "^4.0.15",
     "commander": "*",
     "eslint": "*",
     "execa": "*",

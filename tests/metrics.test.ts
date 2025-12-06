@@ -100,5 +100,30 @@ describe('metrics', () => {
             // 225.4 / 3 = 75.1
             expect(s.accuracyScore).toBeGreaterThan(0);
         });
+
+        it('handles singleCodeBlock=false constraint', () => {
+            const input = '```ts\n1\n```\n```ts\n2\n```';
+            const result = extractCode(input, { noAny: false, singleCodeBlock: false });
+            expect(result.instructionViolations).toHaveLength(0);
+        });
+
+        it('handles empty results and latency calculation', () => {
+            const results: RunResult[] = [];
+            const summaries = summarizeModelResults(results);
+            expect(summaries).toHaveLength(0);
+        });
+
+        it('handles generic code finding fallback', () => {
+            const input = 'function foo() {}';
+            const result = extractCode(input, { noAny: false, singleCodeBlock: true });
+            expect(result.code).toBe(input);
+            expect(result.instructionViolations).toHaveLength(0);
+        });
+
+        it('reports violation if no code found', () => {
+            const input = 'just text';
+            const result = extractCode(input, { noAny: false, singleCodeBlock: true });
+            expect(result.instructionViolations).toContain('No markdown code block found');
+        });
     });
 });
