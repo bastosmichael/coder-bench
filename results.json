@@ -1,211 +1,257 @@
-[
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "sh-log-rotator",
-    "compileOk": true,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 26323
+{
+  "system": {
+    "platform": "win32",
+    "release": "10.0.26100",
+    "arch": "x64",
+    "cpuModel": "Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz",
+    "cpuSpeed": 1992,
+    "cpuCores": 8,
+    "totalMemory": 17075023872
   },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "cpp-lru-cache",
-    "compileOk": false,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 28143
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "cs-lru-cache",
-    "compileOk": false,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 9477
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "go-lru-cache",
-    "compileOk": false,
-    "lintErrors": 1,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 17734
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "hs-lru-cache",
-    "compileOk": false,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 7451
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "html-semantic-page",
-    "compileOk": true,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 13082
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "java-lru-cache",
-    "compileOk": false,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 11830
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "ml-lru-cache",
-    "compileOk": false,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 21046
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "php-lru-cache",
-    "compileOk": false,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 16023
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "py-binary-parser",
-    "compileOk": true,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 25529
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "py-concurrent-queue",
-    "compileOk": false,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 22135
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "py-lru-cache",
-    "compileOk": true,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 18683
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "rb-lru-cache",
-    "compileOk": false,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 21021
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "rs-lru-cache",
-    "compileOk": false,
-    "lintErrors": 1,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 15692
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "scala-lru-cache",
-    "compileOk": false,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 10044
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "sql-ecommerce-analytics",
-    "compileOk": true,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 4983
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "ts-binary-parser",
-    "compileOk": false,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 32352
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "ts-concurrent-queue",
-    "compileOk": false,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 12009
-  },
-  {
-    "model": "qwen2.5-coder:0.5b",
-    "scenarioId": "ts-lru-cache",
-    "compileOk": false,
-    "lintErrors": 0,
-    "lintWarnings": 0,
-    "testsPassed": 0,
-    "testsFailed": 0,
-    "instructionViolations": [],
-    "latencyMs": 35967
-  }
-]
+  "results": [
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "sh-log-rotator",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 11602
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "cpp-lru-cache",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 16843
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "cs-lru-cache",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 6855
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "dart-binary-parser",
+      "compileOk": false,
+      "lintErrors": 14,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 24594
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "dart-concurrent-queue",
+      "compileOk": false,
+      "lintErrors": 18,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 18836
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "dart-lru-cache",
+      "compileOk": false,
+      "lintErrors": 14,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [
+        "Multiple code blocks detected when only one was expected"
+      ],
+      "latencyMs": 24250
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "go-lru-cache",
+      "compileOk": false,
+      "lintErrors": 1,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 16548
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "hs-lru-cache",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 4577
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "html-semantic-page",
+      "compileOk": true,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 8385
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "java-lru-cache",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 11205
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "ml-lru-cache",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 14940
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "php-lru-cache",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 30429
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "py-binary-parser",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 25744
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "py-concurrent-queue",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 34022
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "py-lru-cache",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 29061
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "rb-lru-cache",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 8404
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "rs-lru-cache",
+      "compileOk": false,
+      "lintErrors": 1,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 42949
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "scala-lru-cache",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 26871
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "sql-ecommerce-analytics",
+      "compileOk": true,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "instructionViolations": [],
+      "latencyMs": 1949
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "ts-binary-parser",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 1,
+      "instructionViolations": [],
+      "latencyMs": 23517
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "ts-concurrent-queue",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 5,
+      "instructionViolations": [],
+      "latencyMs": 9436
+    },
+    {
+      "model": "qwen2.5-coder:0.5b",
+      "scenarioId": "ts-lru-cache",
+      "compileOk": false,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "testsPassed": 0,
+      "testsFailed": 1,
+      "instructionViolations": [],
+      "latencyMs": 36340
+    }
+  ]
+}

@@ -287,8 +287,14 @@ We don't test "Reverse a Linked List". We test:
 
 ## Benchmark Summary
 
-Last updated: 2025-12-06T13:54:40.413Z
+Last updated: 2025-12-06T15:18:18.461Z
+
+**System Environment**
+- **OS**: win32 10.0.26100 (x64)
+- **CPU**: Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz (8 cores)
+- **Memory**: 15.90 GB
+
 
 | Model | Score | C++ | Rust | Hs | Scala | Java | C# | Go | Dart | TS | Py | Ruby | PHP | Bash | HTML | SQL | Latency (ms) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| qwen2.5-coder:0.5b | 25.2 | 20.1 | 0.1 | 20.3 | 20.2 | 20.2 | 20.2 | 0.1 | 0.0 | 20.1 | 40.1 | 20.1 | 20.1 | 50.1 | 50.2 | 50.4 | 17734 |
+| qwen2.5-coder:0.5b | 20.2 | 20 | 0 | 20 | 20 | 20 | 20 | 0 | 0 | 20 | 20 | 20 | 20 | 20 | 50 | 51 | 18836 |
